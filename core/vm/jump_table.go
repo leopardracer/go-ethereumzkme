@@ -135,6 +135,7 @@ func newLondonInstructionSet() JumpTable {
 	instructionSet := newBerlinInstructionSet()
 	enable3529(&instructionSet) // EIP-3529: Reduction in refunds https://eips.ethereum.org/EIPS/eip-3529
 	enable3198(&instructionSet) // Base fee opcode https://eips.ethereum.org/EIPS/eip-3198
+	enable5656(&instructionSet) // EIP-5656 (MCOPY opcode)
 	instructionSet.MustValidate()
 	return instructionSet
 }
